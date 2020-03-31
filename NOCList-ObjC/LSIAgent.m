@@ -22,4 +22,21 @@
     return self;
 }
 
+- (void)compromisedAgents:(NSArray *)nocList {
+    
+}
+
+- (void)cleanAgents:(NSArray *)nocList {
+    
+}
+
+- (void)highRiskAgents:(NSArray *)nocList {
+    
+}
+
+- (void)agentsByAccessLevel:(NSArray *)nocList {
+    
+}
+
+
 @end

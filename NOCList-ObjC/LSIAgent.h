@@ -19,7 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithString:(NSString *)coverName realName:(NSString *)realName accessLevel:(int)accessLevel compromised:(BOOL)compromised;
 
+- (void)compromisedAgents:(NSArray *)nocList;
 
+- (void)cleanAgents:(NSArray *)nocList;
+
+- (void)highRiskAgents:(NSArray *)nocList;
+
+- (void)agentsByAccessLevel:(NSArray *)nocList;
 
 
 @end
