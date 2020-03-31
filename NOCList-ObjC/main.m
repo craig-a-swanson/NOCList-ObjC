@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LSIAgent.h"
+#import "LSILog.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

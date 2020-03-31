@@ -7,6 +7,7 @@
 //
 
 #import "LSIAgent.h"
+#import "LSILog.h"
 
 @implementation LSIAgent
 
