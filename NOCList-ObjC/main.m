@@ -36,6 +36,8 @@ int main(int argc, const char * argv[]) {
                              jHarmon,
                              fBarnes];
         
+        LSIAgent *classInstance = [LSIAgent new];
+        [classInstance compromisedAgents:nocList];
     }
     return 0;
 }

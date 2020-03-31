@@ -23,7 +23,13 @@
 }
 
 - (void)compromisedAgents:(NSArray *)nocList {
-    
+    int counter = 0;
+    for (LSIAgent *agent in nocList) {
+        if ([agent compromised] == [NSNumber numberWithBool:YES]) {
+            counter++;
+        }
+    }
+    NSLog(@"There are %i compromised agents", counter);
 }
 
 - (void)cleanAgents:(NSArray *)nocList {
