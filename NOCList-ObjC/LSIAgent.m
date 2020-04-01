@@ -41,11 +41,19 @@
             NSLog(@"Agent %@ is clean.", [agent coverName]);
         }
     }
-    NSLog(@"Ther are %i clean agents.", counter);
+    NSLog(@"There are %i clean agents.", counter);
 }
 
 - (void)highRiskAgents:(NSArray *)nocList {
-    
+    for (LSIAgent *agent in nocList) {
+        if ([[agent accessLevel] isGreaterThanOrEqualTo:[NSNumber numberWithInt:8]]) {
+            if ([agent compromised] == [NSNumber numberWithBool:YES]) {
+                NSLog(@"%@, level: %@ **WARNING** **COMPROMISED**", [agent realName], [agent accessLevel]);
+            } else {
+                NSLog(@"%@, level: %@", [agent realName], [agent accessLevel]);
+            }
+        }
+    }
 }
 
 - (void)agentsByAccessLevel:(NSArray *)nocList {
