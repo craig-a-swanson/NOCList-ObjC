@@ -39,6 +39,8 @@ int main(int argc, const char * argv[]) {
         
         LSIAgent *classInstance = [LSIAgent new];
         [classInstance compromisedAgents:nocList];
+        [classInstance cleanAgents:nocList];
+        
     }
     return 0;
 }
