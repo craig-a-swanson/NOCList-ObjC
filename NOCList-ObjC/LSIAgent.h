@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)agentsByAccessLevel:(NSArray *)nocList;
 
+- (void)agentSummary:(NSArray *)nocList;
 
 @end
 

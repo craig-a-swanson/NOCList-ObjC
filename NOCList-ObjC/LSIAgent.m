@@ -71,5 +71,13 @@
     NSLog(@"%i low level agents, %i mid level agents, and %i high level agents.", lowCount, midCount, highCount);
 }
 
+- (void)agentSummary:(NSArray *)nocList {
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"accessLevel" ascending:YES];
+    NSArray *sortedNocList = [nocList sortedArrayUsingDescriptors:@[sortDescriptor]];
+    for (LSIAgent *agent in sortedNocList) {
+        NSLog(@"Agent %@, Access Level %@", [agent coverName], [agent accessLevel]);
+    }
+}
 
 @end
