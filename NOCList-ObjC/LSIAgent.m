@@ -57,7 +57,19 @@
 }
 
 - (void)agentsByAccessLevel:(NSArray *)nocList {
-    
+    int lowCount = 0;
+    int midCount = 0;
+    int highCount = 0;
+    for (LSIAgent *agent in nocList) {
+        if ([[agent accessLevel] isLessThanOrEqualTo:[NSNumber numberWithInt:4]]) {
+            lowCount++;
+        } else if ([[agent accessLevel] isLessThanOrEqualTo:[NSNumber numberWithInt:7]]) {
+            midCount++;
+        } else {
+            highCount++;
+        }
+    }
+    NSLog(@"%i low level agents, %i mid level agents, and %i high level agents.", lowCount, midCount, highCount);
 }
 
 

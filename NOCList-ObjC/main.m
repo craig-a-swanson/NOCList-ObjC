@@ -41,6 +41,7 @@ int main(int argc, const char * argv[]) {
         [classInstance compromisedAgents:nocList];
         [classInstance cleanAgents:nocList];
         [classInstance highRiskAgents:nocList];
+        [classInstance agentsByAccessLevel:nocList];
         
     }
     return 0;
